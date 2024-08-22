@@ -3,6 +3,7 @@ unique_ids:
     FurnitureItemTemplate: '1724310786310286632993080.842'
     Mainscreen: '1724297284753583868336220.5101'
     Mainscreen.ItemTemplate1: '1724312588482383747167453.043'
+    OrderDetails: '1724366667260700409873248.0306'
     SignInForm: FTKXAIUGKRJMLKRL43WSEXDZMRDUZKS6
   modules: {}
   server_modules:

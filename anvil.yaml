@@ -32,13 +32,13 @@ db_schema:
     - name: Price
       admin_ui: {width: 200, order: 3}
       type: number
-    - name: InStock
-      admin_ui: {width: 200, order: 4}
-      type: bool
     - name: id
       admin_ui: {width: 200}
       type: string
-    title: Furniture
+    - name: Stock
+      admin_ui: {width: 200, order: 2.5}
+      type: number
+    title: furniture
   orders:
     client: full
     server: full
@@ -58,4 +58,22 @@ db_schema:
     - name: status
       admin_ui: {width: 200, order: 4}
       type: string
+    - name: customer
+      admin_ui: {width: 200, order: 5}
+      type: link_single
+      target: customer
     title: Orders
+  customer:
+    client: none
+    server: full
+    columns:
+    - name: Name
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: Email
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: Phone
+      admin_ui: {width: 200, order: 2}
+      type: number
+    title: Customer

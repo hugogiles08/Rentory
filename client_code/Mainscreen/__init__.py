@@ -1,3 +1,10 @@
+#Created by Hugo Giles
+#Date modified 23/08/24
+#The Mainscreen class manages a shopping cart by loading furniture items and initializing an empty cart. It allows users to add
+#items to the cart or update quantities if the items already exist. The class also provides functionality to view the cart contents,
+#with options to edit or close the cart. Users can adjust item quantities or remove items as needed. When confirming an order,
+#the class saves the order to a database, clears the cart, and confirms the order with the user. 
+
 from ._anvil_designer import MainscreenTemplate
 from anvil import *
 import anvil.tables as tables
@@ -5,7 +12,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 import datetime
-import datetime
+from ..OrderDetails import OrderDetails
 
 class Mainscreen(MainscreenTemplate):
     def __init__(self, **properties):
@@ -63,7 +70,11 @@ class Mainscreen(MainscreenTemplate):
         if not self.cart:
             alert("Your cart is empty.")
             return
+        else:
+            alert(content = OrderDetails(), large = True, buttons=[("Done", "done"), ("Back", "back")])
 
+
+          
         # Calculate the total price of the order
         total_price = sum(item['quantity'] * item['price'] for item in self.cart)
 

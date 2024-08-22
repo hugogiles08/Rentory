@@ -28,12 +28,12 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - name: button_confirm_order
-    properties: {text: Complete Order, role: outlined-button}
+    properties: {text: Complete Order, role: elevated-button}
     type: Button
     layout_properties: {}
     event_bindings: {click: button_confirm_order_click}
   - name: button_view_cart
-    properties: {text: View Cart, role: outlined-button, bold: false}
+    properties: {text: View Cart, role: elevated-button, bold: false}
     type: Button
     layout_properties: {}
     event_bindings: {click: button_view_cart_click}

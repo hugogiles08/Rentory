@@ -9,7 +9,7 @@ components:
   layout_properties: {slot: default}
   components:
   - name: outlined_card_1
-    properties: {role: outlined-card, background: 'theme:Neutral', spacing_below: medium, spacing_above: medium, col_spacing: medium, col_widths: '{"XIFNGU":50,"RQOPZA":10,"DNXZKP":20,"HFGZZY":40}'}
+    properties: {role: outlined-card, background: '', spacing_below: medium, spacing_above: medium, col_spacing: medium, col_widths: '{"XIFNGU":50,"RQOPZA":10,"DNXZKP":20,"HFGZZY":40}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'LDVBLT,WJFPUT'}
     components:
@@ -18,7 +18,7 @@ components:
       type: Image
       layout_properties: {grid_position: 'OINQQU,XIFNGU BEANUJ,DNXZKP'}
     - name: outlined_card_3
-      properties: {role: outlined-card, background: 'theme:Neutral'}
+      properties: {role: outlined-card, background: ''}
       type: ColumnPanel
       layout_properties: {grid_position: 'OINQQU,XIFNGU BEANUJ,HFGZZY ZNIEWH,WTWJSH'}
       components:
@@ -27,7 +27,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'YYFBFW,VRSKNM'}
     - name: label_category
-      properties: {foreground: 'theme:Surface'}
+      properties: {foreground: ''}
       type: Label
       layout_properties: {grid_position: 'OINQQU,XIFNGU BEANUJ,HFGZZY KWUJWR,LNWRXR'}
     - name: outlined_card_2
@@ -36,16 +36,16 @@ components:
       layout_properties: {grid_position: 'OINQQU,RQOPZA'}
       components:
       - name: button_add_to_cart
-        properties: {text: Add to cart, role: tonal-button, bold: true}
+        properties: {text: Add to cart, role: filled-button, bold: true}
         type: Button
         layout_properties: {grid_position: 'AYPHKR,YZHMPA'}
         event_bindings: {click: button_add_to_cart_click}
       - name: text_box_quantity
-        properties: {type: number, foreground: 'theme:Surface', background: '', placeholder: amount, role: outlined}
+        properties: {type: number, foreground: '', background: '', placeholder: amount, role: outlined}
         type: TextBox
         layout_properties: {grid_position: 'NZDFCA,XGNHNN'}
     - name: label_price
-      properties: {foreground: 'theme:Surface'}
+      properties: {foreground: ''}
       type: Label
       layout_properties: {grid_position: 'OINQQU,XIFNGU BEANUJ,HFGZZY IHNQMD,SPZYKX'}
 - type: FlowPanel

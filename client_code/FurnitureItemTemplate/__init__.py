@@ -1,3 +1,9 @@
+# Created by Hugo Giles
+# Date modified 22/08/24
+# This code defines a template for displaying individual furniture items.
+# The button_add_to_cart_click function allows the user to add the item to the shopping cart by retrieving the specified quantity,
+# creating an item dictionary, adding it to the cart in the main form, and notifying the user that the item has been added.
+
 from ._anvil_designer import FurnitureItemTemplateTemplate
 from anvil import *
 import anvil.tables as tables
