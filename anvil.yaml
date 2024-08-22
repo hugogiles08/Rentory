@@ -35,6 +35,9 @@ db_schema:
     - name: InStock
       admin_ui: {width: 200, order: 4}
       type: bool
+    - name: id
+      admin_ui: {width: 200}
+      type: string
     title: Furniture
   orders:
     client: full

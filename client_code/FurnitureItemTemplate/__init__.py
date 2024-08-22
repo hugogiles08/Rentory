@@ -10,7 +10,11 @@ class FurnitureItemTemplate(FurnitureItemTemplateTemplate):
     def __init__(self, **properties):
         self.init_components(**properties)
         # Assume 'self.item' contains the current item details from the Furniture table
-
+        self.label_furniture_name.text = self.item['Name']
+        self.label_category.text = self.item['Category']
+        self.label_price.text = f"${self.item['Price']}"
+        self.image_furniture.source = self.item['Image']
+      
     def button_add_to_cart_click(self, **event_args):
         # Get the quantity from the quantity TextBox
         quantity = int(self.text_box_quantity.text)

@@ -27,14 +27,16 @@ components:
   name: navbar_links
   layout_properties: {slot: nav-right}
   components:
-  - name: button_complete
+  - name: button_confirm_order
     properties: {text: Complete Order, role: outlined-button}
     type: Button
     layout_properties: {}
+    event_bindings: {click: button_confirm_order_click}
   - name: button_view_cart
     properties: {text: View Cart, role: outlined-button, bold: false}
     type: Button
     layout_properties: {}
+    event_bindings: {click: button_view_cart_click}
 - name: column_panel_1
   properties: {background: ''}
   type: ColumnPanel

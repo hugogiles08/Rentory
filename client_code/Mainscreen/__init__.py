@@ -14,7 +14,7 @@ class Mainscreen(MainscreenTemplate):
         self.cart = []
 
         # Retrieve all furniture items from the Furniture table and display them in the RepeatingPanel
-        furniture_items = app_tables.Furniture.search()
+        furniture_items = app_tables.furniture.search()
         self.repeating_panel_furniture.items = furniture_items
 
     def add_to_cart(self, item_to_add):
@@ -30,18 +30,19 @@ class Mainscreen(MainscreenTemplate):
         
         # Optionally, print the cart contents for debugging
         print(self.cart)
-
+        #when this button is clicked run the show_cart_contents fuction
     def button_view_cart_click(self, **event_args):
         self.show_cart_contents()
 
     def show_cart_contents(self):
+        #if self.cart is empty, tell user its empty
         if not self.cart:
             alert("Your cart is empty.")
         else:
             # Create a string to display cart contents
             cart_contents = "\n".join([f"{item['quantity']} x {item['name']} @ ${item['price']} each" for item in self.cart])
             response = alert(cart_contents, title="Cart Contents", buttons=[("Edit", "edit"), ("Close", "close")])
-
+            #if user selects edit button, run edit_cart fuction
             if response == "edit":
                 self.edit_cart()
 
