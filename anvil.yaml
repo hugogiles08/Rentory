@@ -15,3 +15,24 @@ services:
   server_config: {}
 metadata: {logo_img: 'asset:Automatix.png'}
 startup: {type: form, module: SignInForm}
+db_schema:
+  furniture:
+    client: none
+    server: full
+    columns:
+    - name: Image
+      admin_ui: {width: 200, order: 0}
+      type: media
+    - name: Name
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: Category
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: Price
+      admin_ui: {width: 200, order: 3}
+      type: number
+    - name: InStock
+      admin_ui: {width: 200, order: 4}
+      type: bool
+    title: Furniture

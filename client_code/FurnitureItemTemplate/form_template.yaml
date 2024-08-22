@@ -13,7 +13,7 @@ components:
     type: ColumnPanel
     layout_properties: {grid_position: 'REBUAR,UYVCNF'}
     components:
-    - name: image_1
+    - name: image_furniture
       properties: {height: 158}
       type: Image
       layout_properties: {grid_position: 'BEANUJ,DNXZKP'}
@@ -21,23 +21,31 @@ components:
       properties: {role: headline}
       type: Label
       layout_properties: {grid_position: 'BEANUJ,HFGZZY AGENOO,EYEMEJ'}
-    - name: label_2
+    - name: label_category
       properties: {}
       type: Label
       layout_properties: {grid_position: 'BEANUJ,HFGZZY KWUJWR,LNWRXR'}
+    - name: label_price
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'BEANUJ,HFGZZY IHNQMD,SPZYKX'}
     - name: outlined_card_2
       properties: {role: elevated-card, spacing_above: large, spacing_below: none, background: 'theme:Neutral'}
       type: ColumnPanel
       layout_properties: {grid_position: 'BEANUJ,POUCZB'}
       components:
+      - name: label_q_in_cart
+        properties: {align: center, spacing_above: large, spacing_below: small, role: input-prompt}
+        type: Label
+        layout_properties: {grid_position: 'AQJKVR,QJLSQH'}
       - name: button_add
         properties: {text: +, role: tonal-button}
         type: Button
-        layout_properties: {grid_position: 'AYPHKR,YZHMPA'}
+        layout_properties: {grid_position: 'AQJKVR,DRGKQD AYPHKR,YZHMPA'}
       - name: button_minus
         properties: {text: '-', role: tonal-button}
         type: Button
-        layout_properties: {grid_position: 'IIYOTW,GGLLBL'}
+        layout_properties: {grid_position: 'AQJKVR,DRGKQD IIYOTW,GGLLBL'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
