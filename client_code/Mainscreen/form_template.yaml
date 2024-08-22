@@ -1,13 +1,40 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+  properties: {html: '@theme:standard-page.html', background: ''}
 components:
 - type: ColumnPanel
   properties: {}
   name: content_panel
   layout_properties: {slot: default}
+  components:
+  - name: outlined_card_2
+    properties: {role: outlined-card, background: 'theme:Neutral'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'AEWOWQ,IHHZMR'}
+    components:
+    - name: repeating_panel_1
+      properties: {item_template: Mainscreen.ItemTemplate1}
+      type: RepeatingPanel
+      layout_properties: {grid_position: 'UNXSCW,BXGUGT'}
+  - name: outlined_card_3
+    properties: {role: null}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'SYDCJK,VEOEWH'}
+    components:
+    - name: button_complete
+      properties: {text: Complete, role: tonal-button}
+      type: Button
+      layout_properties: {grid_position: 'NWMDFX,AFEQIO'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+- name: column_panel_1
+  properties: {background: ''}
+  type: ColumnPanel
+  layout_properties: {slot: left-nav}
+- name: label_1
+  properties: {text: Stock Manager App, role: title, icon_align: top, border: ''}
+  type: Label
+  layout_properties: {slot: title}

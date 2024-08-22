@@ -1,9 +1,9 @@
-from ._anvil_designer import MainscreenTemplate
+from ._anvil_designer import FurnitureItemTemplateTemplate
 from anvil import *
 import anvil.server
 
 
-class Mainscreen(MainscreenTemplate):
+class FurnitureItemTemplate(FurnitureItemTemplateTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
