@@ -4,6 +4,6 @@ unique_ids:
   modules: {}
   server_modules: {}
   assets:
-    theme.css: BHWZOTGLS6CWNL73DVVSTLFS5AC7NWDU
     standard-page.html: OAL2JGPBD3D2NAZQGAGE7JHU57LJEXWC
+    theme.css: BHWZOTGLS6CWNL73DVVSTLFS5AC7NWDU
   scripts: {}
