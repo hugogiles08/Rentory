@@ -14,7 +14,7 @@ services:
   client_config: {}
   server_config: {}
 metadata: {logo_img: 'asset:Automatix.png'}
-startup: {type: form, module: Mainscreen}
+startup: {type: form, module: SignInForm}
 db_schema:
   furniture:
     client: full
