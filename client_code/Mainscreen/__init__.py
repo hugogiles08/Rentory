@@ -17,7 +17,7 @@ from ..OrderDetails import OrderDetails
 class Mainscreen(MainscreenTemplate):
     def __init__(self, **properties):
         self.init_components(**properties)
-        # Initialize an empty cart list
+        # Initialize an empty cart list to store items the user adds
         self.cart = []
 
         # Retrieve all furniture items from the Furniture table and display them in the RepeatingPanel
@@ -32,10 +32,10 @@ class Mainscreen(MainscreenTemplate):
                 item['quantity'] += item_to_add['quantity']
                 break
         else:
-            # If the item is not in the cart, add it
+            # If the item is not in the cart, add it as a new item
             self.cart.append(item_to_add)
         
-        # Optionally, print the cart contents for debugging
+        #print the cart contents for debugging
         print(self.cart)
         #when this button is clicked run the show_cart_contents fuction
     def button_view_cart_click(self, **event_args):
