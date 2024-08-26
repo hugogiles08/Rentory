@@ -35,8 +35,7 @@ class Mainscreen(MainscreenTemplate):
             # If the item is not in the cart, add it as a new item
             self.cart.append(item_to_add)
         
-        #print the cart contents for debugging
-        print(self.cart)
+
         #when this button is clicked run the show_cart_contents fuction
     def button_view_cart_click(self, **event_args):
         self.show_cart_contents()
@@ -55,7 +54,7 @@ class Mainscreen(MainscreenTemplate):
 
     def edit_cart(self):
         for index, item in enumerate(self.cart):
-            new_quantity = int(prompt(f"Enter new quantity for {item['name']}: ", value=item['quantity']))
+            new_quantity = int(input(f"Enter new quantity for {item['name']}: ", value=item['quantity']))
 
             if new_quantity <= 0:
                 # Remove item from cart if quantity is zero or negative

@@ -21,7 +21,7 @@ class SignInForm(SignInFormTemplate):
         password = self.text_box_password.text
 
         # Check if the entered username and password match the predefined values 'admin' and 'password'
-        if username == 'admin' and password == 'password':
+        if username == 'user123' and password == 'password123':
             # If the credentials are correct, open the Mainscreen form
             open_form('Mainscreen')
         else:
