@@ -20,6 +20,7 @@ class FurnitureItemTemplate(FurnitureItemTemplateTemplate):
         self.label_category.text = self.item['Category']
         self.label_price.text = f"${self.item['Price']}"
         self.image_furniture.source = self.item['Image']
+        self.label_instock.text = f"In Stock: {self.item['Stock']}"
       
     def button_add_to_cart_click(self, **event_args):
         # Get the quantity from the quantity TextBox

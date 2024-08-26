@@ -37,6 +37,10 @@ components:
     type: Button
     layout_properties: {}
     event_bindings: {click: button_view_cart_click}
+  - name: image_1
+    properties: {height: 48, source: _/theme/Untitled design.png}
+    type: Image
+    layout_properties: {}
 - name: column_panel_1
   properties: {background: ''}
   type: ColumnPanel

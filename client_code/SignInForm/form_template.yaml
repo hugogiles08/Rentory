@@ -12,11 +12,7 @@ components:
     properties: {role: null}
     type: ColumnPanel
     layout_properties: {grid_position: 'KGLRQL,VGHIOR'}
-    components:
-    - name: label_1
-      properties: {text: BaliStock, role: headline, align: center, bold: true, font: Helvetica, font_size: null, background: '', foreground: 'theme:White'}
-      type: Label
-      layout_properties: {grid_position: 'OBSPEL,WGYNBS'}
+    components: []
   - name: outlined_card_1
     properties: {role: outlined-card, background: 'theme:Neutral'}
     type: ColumnPanel
@@ -40,3 +36,12 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+  components:
+  - name: image_1
+    properties: {height: 65.22219848632812, source: _/theme/Untitled design.png}
+    type: Image
+    layout_properties: {}
+- name: label_1_copy
+  properties: {text: Stock Manager App, role: title, icon_align: top, border: ''}
+  type: Label
+  layout_properties: {slot: title}

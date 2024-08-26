@@ -46,7 +46,9 @@ class Mainscreen(MainscreenTemplate):
             alert("Your cart is empty.")
         else:
             # Create a string to display cart contents
-            cart_contents = "\n".join([f"{item['quantity']} x {item['name']} @ ${item['price']} each" for item in self.cart])
+            cart_contents = "\n".join([f"{item['quantity']} x {item['name']} - ${item['price'] * item['quantity']}" for item in self.cart])
+            total_price = sum(item['price'] * item['quantity'] for item in self.cart)
+            cart_contents += f"\n\nTotal: ${total_price}"
             response = alert(cart_contents, title="Cart Contents", buttons=[("Edit", "edit"), ("Close", "close")])
             #if user selects edit button, run edit_cart fuction
             if response == "edit":
@@ -78,7 +80,7 @@ class Mainscreen(MainscreenTemplate):
         total_price = sum(item['quantity'] * item['price'] for item in self.cart)
 
         # Save the order to the Orders table
-        app_tables.Orders.add_row(
+        app_tables.orders.add_row(
             items=self.cart,
             total_price=total_price,
             created_at=datetime.datetime.now(),

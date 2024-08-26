@@ -26,14 +26,10 @@ components:
         properties: {role: headline, background: '', foreground: 'theme:Carbon', bold: true}
         type: Label
         layout_properties: {grid_position: 'YYFBFW,VRSKNM'}
-    - name: label_category
-      properties: {foreground: ''}
-      type: Label
-      layout_properties: {grid_position: 'OINQQU,XIFNGU BEANUJ,HFGZZY KWUJWR,LNWRXR'}
     - name: outlined_card_2
       properties: {role: elevated-card, spacing_above: large, spacing_below: none, background: 'theme:Neutral', col_spacing: none}
       type: ColumnPanel
-      layout_properties: {grid_position: 'OINQQU,RQOPZA'}
+      layout_properties: {grid_position: 'OINQQU,RQOPZA VUROYS,ANRHMN'}
       components:
       - name: button_add_to_cart
         properties: {text: Add to cart, role: filled-button, bold: true}
@@ -44,10 +40,28 @@ components:
         properties: {type: number, foreground: '', background: '', placeholder: amount, role: outlined}
         type: TextBox
         layout_properties: {grid_position: 'NZDFCA,XGNHNN'}
-    - name: label_price
-      properties: {foreground: ''}
-      type: Label
-      layout_properties: {grid_position: 'OINQQU,XIFNGU BEANUJ,HFGZZY IHNQMD,SPZYKX'}
+    - name: outlined_card_5
+      properties: {role: outlined-card}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'OINQQU,RQOPZA DGMSOA,WIWHOA'}
+      components:
+      - name: label_instock
+        properties: {}
+        type: Label
+        layout_properties: {grid_position: 'CFUXKM,CGZJGZ'}
+    - name: outlined_card_4
+      properties: {role: outlined-card}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'OINQQU,XIFNGU BEANUJ,HFGZZY TQWGNG,RPHGBB'}
+      components:
+      - name: label_category
+        properties: {foreground: ''}
+        type: Label
+        layout_properties: {grid_position: 'LNDZSK,CFPGCU'}
+      - name: label_price
+        properties: {foreground: ''}
+        type: Label
+        layout_properties: {grid_position: 'GCQOEG,PQGXYV'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
