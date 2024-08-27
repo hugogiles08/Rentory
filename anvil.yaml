@@ -64,7 +64,7 @@ db_schema:
       target: customer
     title: orders
   customer:
-    client: none
+    client: full
     server: full
     columns:
     - name: Name

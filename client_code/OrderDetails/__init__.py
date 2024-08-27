@@ -13,4 +13,13 @@ class OrderDetails(OrderDetailsTemplate):
 
     # Any code you write here will run before the form opens.
 
+  def button_submit_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    
+    app_tables.customer.add_row(
+            Name=self.textbox_name.text,
+            Email=self.textbox_email.text,
+            Phone=self.textbox_phone.text
+        )
 
+    
