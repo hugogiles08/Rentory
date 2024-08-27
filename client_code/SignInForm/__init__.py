@@ -28,3 +28,5 @@ class SignInForm(SignInFormTemplate):
             # If the credentials are incorrect, display an alert message to the user
             alert("Invalid username or password")
 
+    
+
