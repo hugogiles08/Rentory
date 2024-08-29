@@ -1,79 +1,79 @@
 allow_embedding: false
-package_name: StockAppNew
-name: StockAppNew
-startup_form: null
-renamed: true
-runtime_options:
-  version: 2
-  client_version: '3'
-  server_version: python3-sandbox
-  server_spec: {base: python310-standard}
-dependencies: []
-services:
-- source: /runtime/services/tables.yml
-  client_config: {}
-  server_config: {}
-metadata: {logo_img: 'asset:Automatix.png'}
-startup: {type: form, module: SignInForm}
 db_schema:
+  customer:
+    client: full
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: Name
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: Email
+      type: string
+    - admin_ui: {order: 2, width: 200}
+      name: Phone
+      type: number
+    server: full
+    title: Customer
   furniture:
     client: full
-    server: full
     columns:
-    - name: Image
-      admin_ui: {width: 200, order: 0}
+    - admin_ui: {order: 0, width: 200}
+      name: Image
       type: media
-    - name: Name
-      admin_ui: {width: 200, order: 1}
+    - admin_ui: {order: 1, width: 200}
+      name: Name
       type: string
-    - name: Category
-      admin_ui: {width: 200, order: 2}
+    - admin_ui: {order: 2, width: 200}
+      name: Category
       type: string
-    - name: Price
-      admin_ui: {width: 200, order: 3}
+    - admin_ui: {order: 3, width: 200}
+      name: Price
       type: number
-    - name: id
-      admin_ui: {width: 200}
+    - admin_ui: {width: 200}
+      name: id
       type: string
-    - name: Stock
-      admin_ui: {width: 200, order: 2.5}
+    - admin_ui: {order: 2.5, width: 200}
+      name: Stock
       type: number
+    server: full
     title: furniture
   orders:
     client: full
-    server: full
     columns:
-    - name: order_id
-      admin_ui: {width: 200, order: 0}
+    - admin_ui: {order: 0, width: 200}
+      name: order_id
       type: number
-    - name: items
-      admin_ui: {width: 200, order: 1}
+    - admin_ui: {order: 1, width: 200}
+      name: items
       type: simpleObject
-    - name: total_price
-      admin_ui: {width: 200, order: 2}
+    - admin_ui: {order: 2, width: 200}
+      name: total_price
       type: number
-    - name: created_at
-      admin_ui: {width: 200, order: 3}
+    - admin_ui: {order: 3, width: 200}
+      name: created_at
       type: datetime
-    - name: status
-      admin_ui: {width: 200, order: 4}
+    - admin_ui: {order: 4, width: 200}
+      name: status
       type: string
-    - name: customer
-      admin_ui: {width: 200, order: 5}
-      type: link_single
+    - admin_ui: {order: 5, width: 200}
+      name: customer
       target: customer
-    title: orders
-  customer:
-    client: full
+      type: link_single
     server: full
-    columns:
-    - name: Name
-      admin_ui: {width: 200, order: 0}
-      type: string
-    - name: Email
-      admin_ui: {width: 200, order: 1}
-      type: string
-    - name: Phone
-      admin_ui: {width: 200, order: 2}
-      type: number
-    title: Customer
+    title: orders
+dependencies: []
+metadata: {logo_img: 'asset:Automatix.png'}
+name: StockAppNew
+package_name: StockAppNew
+renamed: true
+runtime_options:
+  client_version: '3'
+  server_spec: {base: python310-standard}
+  server_version: python3-sandbox
+  version: 2
+services:
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/tables.yml
+startup: {module: SignInForm, type: form}
+startup_form: null

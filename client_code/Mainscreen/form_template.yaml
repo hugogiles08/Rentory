@@ -1,51 +1,51 @@
-is_package: true
-container:
-  type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html', background: ''}
 components:
-- type: ColumnPanel
-  properties: {}
-  name: content_panel
-  layout_properties: {slot: default}
-  components:
-  - name: outlined_card_2
-    properties: {role: outlined-card, background: ''}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'AEWOWQ,IHHZMR'}
-    components:
-    - name: repeating_panel_furniture
+- components:
+  - components:
+    - layout_properties: {full_width_row: false, grid_position: 'UNXSCW,BXGUGT'}
+      name: repeating_panel_furniture
       properties: {item_template: FurnitureItemTemplate, spacing_above: none, spacing_below: none}
       type: RepeatingPanel
-      layout_properties: {grid_position: 'UNXSCW,BXGUGT', full_width_row: false}
-  - name: outlined_card_3
+    layout_properties: {grid_position: 'AEWOWQ,IHHZMR'}
+    name: outlined_card_2
+    properties: {background: '', role: outlined-card}
+    type: ColumnPanel
+  - components: []
+    layout_properties: {grid_position: 'SYDCJK,VEOEWH'}
+    name: outlined_card_3
     properties: {role: null}
     type: ColumnPanel
-    layout_properties: {grid_position: 'SYDCJK,VEOEWH'}
-    components: []
-- type: FlowPanel
+  layout_properties: {slot: default}
+  name: content_panel
   properties: {}
-  name: navbar_links
-  layout_properties: {slot: nav-right}
-  components:
-  - name: button_confirm_order
-    properties: {text: Complete Order, role: elevated-button}
-    type: Button
+  type: ColumnPanel
+- components:
+  - event_bindings: {click: button_confirm_order_click}
     layout_properties: {}
-    event_bindings: {click: button_confirm_order_click}
-  - name: button_view_cart
-    properties: {text: View Cart, role: elevated-button, bold: false}
+    name: button_confirm_order
+    properties: {role: elevated-button, text: Complete Order}
     type: Button
+  - event_bindings: {click: button_view_cart_click}
     layout_properties: {}
-    event_bindings: {click: button_view_cart_click}
-  - name: image_1
+    name: button_view_cart
+    properties: {bold: false, role: elevated-button, text: View Cart}
+    type: Button
+  - layout_properties: {}
+    name: image_1
     properties: {height: 48, source: _/theme/Untitled design.png}
     type: Image
-    layout_properties: {}
-- name: column_panel_1
+  layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- layout_properties: {slot: left-nav}
+  name: column_panel_1
   properties: {background: ''}
   type: ColumnPanel
-  layout_properties: {slot: left-nav}
-- name: label_1
-  properties: {text: Stock Manager App, role: title, icon_align: top, border: ''}
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {border: '', icon_align: top, role: title, text: Stock Manager App}
   type: Label
-  layout_properties: {slot: title}
+container:
+  properties: {background: '', html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

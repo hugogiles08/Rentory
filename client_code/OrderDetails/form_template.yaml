@@ -1,53 +1,53 @@
-is_package: true
-container:
-  type: HtmlTemplate
-  properties: {html: ''}
 components:
-- type: FlowPanel
-  properties: {}
-  name: navbar_links
-  layout_properties: {slot: nav-right}
-  components:
-  - type: ColumnPanel
-    properties: {}
-    name: content_panel
-    layout_properties: {width: 880.48616796875}
-    components:
-    - name: outlined_card_1
-      properties: {role: outlined-card, col_widths: '{"WXNRLL":45,"IRIAZX":45,"MEZRXX":45}'}
-      type: ColumnPanel
-      layout_properties: {grid_position: 'EOFXEL,XHRBEW'}
-      components:
-      - name: label_1
-        properties: {align: center, text: Customer Details, role: headline, bold: true, font: ''}
+- components:
+  - components:
+    - components:
+      - layout_properties: {grid_position: 'VKVSRB,MBIUAK'}
+        name: label_1
+        properties: {align: center, bold: true, font: '', role: headline, text: Customer Details}
         type: Label
-        layout_properties: {grid_position: 'VKVSRB,MBIUAK'}
-      - name: label_2
-        properties: {text: Name, role: input-prompt, align: center, icon: ''}
+      - layout_properties: {grid_position: 'XCGGCJ,NNMEBF'}
+        name: label_2
+        properties: {align: center, icon: '', role: input-prompt, text: Name}
         type: Label
-        layout_properties: {grid_position: 'XCGGCJ,NNMEBF'}
-      - name: textbox_name
+      - layout_properties: {grid_position: 'AKTUUK,IRIAZX'}
+        name: textbox_name
         properties: {role: outlined}
         type: TextBox
-        layout_properties: {grid_position: 'AKTUUK,IRIAZX'}
-      - name: label_3
-        properties: {text: Email, role: input-prompt, align: center}
+      - layout_properties: {grid_position: 'MSAPBQ,ZCHMQH'}
+        name: label_3
+        properties: {align: center, role: input-prompt, text: Email}
         type: Label
-        layout_properties: {grid_position: 'MSAPBQ,ZCHMQH'}
-      - name: textbox_email
+      - layout_properties: {grid_position: 'KEHBAA,WXNRLL'}
+        name: textbox_email
         properties: {role: outlined, type: email}
         type: TextBox
-        layout_properties: {grid_position: 'KEHBAA,WXNRLL'}
-      - name: label_4
-        properties: {text: Phone Number, role: input-prompt, align: center}
+      - layout_properties: {grid_position: 'DTQWKA,TCPXDY'}
+        name: label_4
+        properties: {align: center, role: input-prompt, text: Phone Number}
         type: Label
-        layout_properties: {grid_position: 'DTQWKA,TCPXDY'}
-      - name: textbox_phone
+      - layout_properties: {grid_position: 'QQTJJS,MEZRXX'}
+        name: textbox_phone
         properties: {role: outlined, type: number}
         type: TextBox
-        layout_properties: {grid_position: 'QQTJJS,MEZRXX'}
-      - name: button_submit
-        properties: {text: Submit, role: elevated-button}
-        type: Button
+      - event_bindings: {click: button_submit_click}
         layout_properties: {grid_position: 'OCRAMO,QZXLMK'}
-        event_bindings: {click: button_submit_click}
+        name: button_submit
+        properties: {role: elevated-button, text: Submit}
+        type: Button
+      layout_properties: {grid_position: 'EOFXEL,XHRBEW'}
+      name: outlined_card_1
+      properties: {col_widths: '{"WXNRLL":45,"IRIAZX":45,"MEZRXX":45}', role: outlined-card}
+      type: ColumnPanel
+    layout_properties: {width: 880.48616796875}
+    name: content_panel
+    properties: {}
+    type: ColumnPanel
+  layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+container:
+  properties: {html: ''}
+  type: HtmlTemplate
+is_package: true
