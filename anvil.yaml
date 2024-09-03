@@ -13,7 +13,7 @@ db_schema:
       name: Phone
       type: number
     server: full
-    title: Customer
+    title: customer
   furniture:
     client: full
     columns:
