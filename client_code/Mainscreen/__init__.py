@@ -85,7 +85,7 @@ class Mainscreen(MainscreenTemplate):
             total_price=total_price,
             created_at=datetime.datetime.now(),
             status="Pending",
-            customer=customer
+            
         )
 
         # Clear the cart after saving the order
